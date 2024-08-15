@@ -3,7 +3,7 @@ Takes SExtractor catalog files and makes stamps from Roman sims for Real/Bogus C
 
 Workflow
 -
-1. Run SExtractor on the image w/ (sex [input.fits] -c config.sex -PARAMETER_NAME config.sex.param -FILTER_NAME config.sex.conv -CATALOG_NAME [output_name.cat])
+1. Run SExtractor on the image (sex.sh, or just copy paste the one line inside)
     - sample configuration parameters are provided, but can be modified
     - ensure that the output parameters include ALPHA_J2000 and DELTA_J2000 values
 2. Run either just fullstamps.py OR (stamps.py THEN makeCSV.py)

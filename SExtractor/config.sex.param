@@ -1,6 +1,6 @@
 #NUMBER                   Running object number          
-X_IMAGE                  Object position along x                                   [pixel]
-Y_IMAGE                  Object position along y                                   [pixel]
+#X_IMAGE                  Object position along x                                   [pixel]
+#Y_IMAGE                  Object position along y                                   [pixel]
 ALPHA_J2000              Right ascension of barycenter (J2000)                     [deg]
 DELTA_J2000              Declination of barycenter (J2000)                         [deg]
 #MAG_ISO                  Isophotal magnitude                                       [mag]

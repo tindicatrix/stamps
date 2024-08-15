@@ -10,8 +10,8 @@
  
 #-------------------------------- Catalog ------------------------------------
  
-CATALOG_NAME     obj.cat   # Catalog filename
-CATALOG_TYPE     FITS_LDAC # FITS_LDAC format or ASCII_HEAD 
+CATALOG_NAME     output.cat     # Catalog filename
+CATALOG_TYPE     FITS_LDAC      # FITS_LDAC format or ASCII_HEAD 
 PARAMETERS_NAME  config.sex.param  # file name with catalog contents
  
 #------------------------------- Extraction ----------------------------------
@@ -29,7 +29,7 @@ DEBLEND_MINCONT  0.05           # Minimum contrast parameter for deblending
 #WEIGHT_GAIN      Y              #modulate gain (E/ADU) with weights
 #WEIGHT_THRESH    1.e-10         #weight threshold for bad pixels
 
-#-------------------------------- FLAGging -----------------------------------
+#-------------------------------- FLAGing -----------------------------------
 #------------------------------ Photometry -----------------------------------
 
 MAG_ZEROPOINT    0              # magnitude zero-point 

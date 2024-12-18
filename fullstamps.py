@@ -31,13 +31,11 @@ CSVfile = saveDirectory+'/!stampID.csv'                                         
 
 #useful methods
 def dist(radecPairs, ra, dec): #returns an array with the distance between the given radec and all sca centers
-        return np.sqrt((radecPairs[:,0]-ra)**2+(radecPairs[:,1]-dec)**2) 
-
+    return angular_separation(lon1=radecPairs[:,0],lat1=radecPairs[:,1],lon2=ra,lat2=dec)
 def bound(scaAr): #calculate distance bound (max between distance from center of scas2&12 or 3&11)
-    bound = np.fmax(np.sqrt((scaAr[0,:,1]-scaAr[0,:,11])**2+(scaAr[1,:,1]-scaAr[1,:,11])**2)/2,np.sqrt((scaAr[0,:,2]-scaAr[0,:,10])**2+(scaAr[1,:,2]-scaAr[1,:,10])**2)/2) 
+    bound = np.fmax(angular_separation(lon1=scaAr[0,:,1],lat1=scaAr[1,:,1],lon2=scaAr[0,:,11],lat2=scaAr[1,:,11])/2, angular_separation(lon1=scaAr[0,:,2], lat1=scaAr[1,:,2], lon2=scaAr[0,:,10], lat2=scaAr[1,:,10])/2) #find max angular seperation
     bound = np.atleast_2d(bound).transpose() #make it a 2d array and vertical
     return np.tile(bound,18).reshape(-1) #tile it so that there's 18 copies in each row and reshape so that its all 1 column
-
 def get_pointing(row:int)->int:
     return (row//18)
 def get_sca(row:int)->int:
